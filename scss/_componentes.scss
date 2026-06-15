@@ -1,0 +1,56 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.button {
+
+    @include botao-padrao;
+
+    &--primary {
+
+        background: linear-gradient(
+            135deg,
+            $cor-primaria,
+            $cor-secundaria
+        );
+
+        color: white;
+    }
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: calc($espacamento / 2);
+
+    color: $cor-secundaria;
+}
+
+.service-card {
+
+    @include card;
+
+    &__title {
+
+        margin-bottom: .8rem;
+    }
+
+    &__text {
+
+        line-height: 1.5;
+    }
+}
+
+.testimonial {
+
+    @include card;
+
+    &__author {
+
+        display: block;
+
+        margin-top: 1rem;
+
+        font-weight: bold;
+    }
+}

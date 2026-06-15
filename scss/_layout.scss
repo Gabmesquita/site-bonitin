@@ -1,0 +1,137 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: $cor-primaria;
+
+    padding: 1rem 8%;
+
+    &__logo {
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__logo-image {
+
+        width: 40px;
+    }
+
+    &__logo-text {
+
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    &__menu {
+
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    &__link {
+
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.hero {
+
+    @include flex-center;
+
+    gap: 3rem;
+
+    min-height: 90vh;
+
+    &__content {
+
+        flex: 1;
+    }
+
+    &__title {
+
+        font-size: 3rem;
+
+        color: $cor-secundaria;
+    }
+
+    &__description {
+
+        margin: calc($espacamento / 2) 0;
+    }
+
+    &__image {
+
+        width: 45%;
+
+        border-radius: 20px;
+    }
+}
+
+.services {
+
+    &__grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(220px, 1fr));
+
+        gap: 1.5rem;
+    }
+}
+
+.contact-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    &__input,
+    &__textarea {
+
+        padding: 1rem;
+
+        border: 1px solid #ccc;
+
+        border-radius: $raio;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+
+        flex-direction: column;
+
+        &__menu {
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        &__image {
+
+            width: 100%;
+        }
+    }
+}

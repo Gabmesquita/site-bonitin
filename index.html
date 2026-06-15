@@ -1,155 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anchor Agency</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Agency</title>
 
-  <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">Anchor</div>
+    <header class="header">
 
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+        <div class="header__logo">
 
-  <!-- HOME -->
-  <section id="home" class="banner">
+            <img
+                class="header__logo-image"
+                src="imagens/anchor.webp"
+                alt="Logo Anchor">
 
-    <div class="banner-texto">
-      <h1>Transformamos ideias em experiências digitais.</h1>
+            <span class="header__logo-text">
+                Anchor
+            </span>
 
-      <p>
-        Design moderno, desenvolvimento web e branding
-        para empresas que querem crescer.
-      </p>
+        </div>
 
-      <button>Conheça nossos serviços</button>
-    </div>
+        <nav class="header__nav">
 
-    <img
-      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-      srcset="
-      https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500 500w,
-      https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000 1000w"
-      alt="Equipe trabalhando"
-    >
-  </section>
+            <ul class="header__menu">
 
-  <!-- SOBRE -->
-  <section id="sobre">
+                <li class="header__item">
+                    <a class="header__link" href="#home">Home</a>
+                </li>
 
-    <h2>Sobre Nós</h2>
+                <li class="header__item">
+                    <a class="header__link" href="#sobre">Sobre</a>
+                </li>
 
-    <p>
-      Somos uma agência digital focada em criar soluções
-      modernas, intuitivas e impactantes para marcas
-      que desejam se destacar no mercado.
-    </p>
+                <li class="header__item">
+                    <a class="header__link" href="#servicos">Serviços</a>
+                </li>
 
-  </section>
+                <li class="header__item">
+                    <a class="header__link" href="#depoimentos">Depoimentos</a>
+                </li>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos">
+                <li class="header__item">
+                    <a class="header__link" href="#contato">Contato</a>
+                </li>
 
-    <h2>Nossos Serviços</h2>
+            </ul>
 
-    <div class="grid-servicos">
+        </nav>
 
-      <div class="card">
-        <h3>Design Gráfico</h3>
-        <p>Criação de identidade visual moderna.</p>
-      </div>
+    </header>
 
-      <div class="card">
-        <h3>Desenvolvimento Web</h3>
-        <p>Sites rápidos, modernos e responsivos.</p>
-      </div>
+    <section class="hero" id="home">
 
-      <div class="card">
-        <h3>Branding</h3>
-        <p>Fortalecimento da presença da sua marca.</p>
-      </div>
+        <div class="hero__content">
 
-      <div class="card">
-        <h3>Marketing Digital</h3>
-        <p>Estratégias para aumentar seu alcance online.</p>
-      </div>
+            <h1 class="hero__title">
+                Transformamos ideias em experiências digitais
+            </h1>
 
-    </div>
+            <p class="hero__description">
+                Design moderno, branding e desenvolvimento web para empresas que desejam crescer.
+            </p>
 
-  </section>
+            <button class="button button--primary">
+                Conheça nossos serviços
+            </button>
 
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos">
+        </div>
 
-    <h2>Depoimentos</h2>
+        <img
+            class="hero__image"
+            src="imagens/team.jfif"
+            alt="Equipe trabalhando">
 
-    <div class="depoimentos-container">
+    </section>
 
-      <div class="depoimento">
-        <p>
-          "A NovaWave transformou completamente nossa presença digital."
+    <section class="about" id="sobre">
+
+        <h2 class="section-title">
+            Sobre Nós
+        </h2>
+
+        <p class="about__text">
+            Somos uma agência especializada em criar experiências digitais modernas, intuitivas e impactantes.
         </p>
 
-        <span>- Mariana Costa</span>
-      </div>
+    </section>
 
-      <div class="depoimento">
-        <p>
-          "Equipe extremamente profissional e criativa."
-        </p>
+    <section class="services" id="servicos">
 
-        <span>- Lucas Mendes</span>
-      </div>
+        <h2 class="section-title">
+            Nossos Serviços
+        </h2>
 
-    </div>
+        <div class="services__grid">
 
-  </section>
+            <article class="service-card">
+                <h3 class="service-card__title">Design Gráfico</h3>
+                <p class="service-card__text">
+                    Criação de identidades visuais modernas.
+                </p>
+            </article>
 
-  <!-- CONTATO -->
-  <section id="contato">
+            <article class="service-card">
+                <h3 class="service-card__title">Desenvolvimento Web</h3>
+                <p class="service-card__text">
+                    Sites modernos e responsivos.
+                </p>
+            </article>
 
-    <h2>Contato</h2>
+            <article class="service-card">
+                <h3 class="service-card__title">Branding</h3>
+                <p class="service-card__text">
+                    Fortalecimento da presença da sua marca.
+                </p>
+            </article>
 
-    <div class="contato-container">
+            <article class="service-card">
+                <h3 class="service-card__title">Marketing Digital</h3>
+                <p class="service-card__text">
+                    Estratégias para aumentar seu alcance online.
+                </p>
+            </article>
 
-      <div class="info-contato">
-        <p>📍 Rua Exemplo, 123</p>
-        <p>📞 (11) 99999-9999</p>
-        <p>✉ contato@novawave.com</p>
-      </div>
+        </div>
 
-      <form>
+    </section>
 
-        <input type="text" placeholder="Seu nome">
+    <section class="testimonials" id="depoimentos">
 
-        <input type="email" placeholder="Seu e-mail">
+        <h2 class="section-title">
+            Depoimentos
+        </h2>
 
-        <textarea placeholder="Sua mensagem"></textarea>
+        <div class="testimonials__container">
 
-        <button type="submit">Enviar</button>
+            <article class="testimonial">
 
-      </form>
+                <p class="testimonial__text">
+                    "A Anchor transformou completamente nossa presença digital."
+                </p>
 
-    </div>
+                <span class="testimonial__author">
+                    - Mariana Costa
+                </span>
 
-  </section>
+            </article>
+
+            <article class="testimonial">
+
+                <p class="testimonial__text">
+                    "Equipe extremamente profissional e criativa."
+                </p>
+
+                <span class="testimonial__author">
+                    - Lucas Mendes
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contato">
+
+        <h2 class="section-title">
+            Contato
+        </h2>
+
+        <div class="contact__container">
+
+            <div class="contact__info">
+
+                <p>📍 Rua Exemplo, 123</p>
+                <p>📞 (11) 99999-9999</p>
+                <p>✉ contato@novawave.com</p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input
+                    class="contact-form__input"
+                    type="text"
+                    placeholder="Seu nome">
+
+                <input
+                    class="contact-form__input"
+                    type="email"
+                    placeholder="Seu e-mail">
+
+                <textarea
+                    class="contact-form__textarea"
+                    placeholder="Sua mensagem"></textarea>
+
+                <button class="button button--primary">
+                    Enviar
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
